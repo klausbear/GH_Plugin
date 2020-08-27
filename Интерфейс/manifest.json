@@ -1,0 +1,12 @@
+{
+	"manifest_version": 2,
+	"name": "Interface slider",
+	"description": "Перемещаемся между страницами Interface slider",
+	"version": "1.0.0",
+	"icons": {"128": "013-virus.png"},
+	"browser_action": {
+		"default_icon": "013-virus.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": ["activeTab"]
+}

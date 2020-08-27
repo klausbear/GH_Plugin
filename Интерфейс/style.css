@@ -1,0 +1,234 @@
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #292b2c;
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+}
+
+h3 {
+  width: 80px;
+  box-sizing: border-box;
+  border: 1px double transparent;
+}
+
+button {
+  width: 230px;
+  height: 40px;
+  border-radius: 4px;
+  border-color: crimson;
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.slider_content_header {
+  display: flex;
+  margin: auto;
+}
+
+span {
+  display: inline-block;
+  color: violet;
+  margin: auto;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+h3:hover {
+  color: violet;
+  cursor: pointer;
+  border: 1px double violet;
+  box-shadow: -1px 1px violet;
+}
+
+.store_visit {
+  height: 60px;
+  padding: auto;
+  margin-bottom: 20px;
+}
+
+.store_visit>a {
+  cursor: pointer; 
+  margin-right: 60px; 
+  margin-top: 10px; 
+  font-size: 16px; 
+  font-weight: 600;
+}
+
+.store_visit>a:hover {
+  color: crimson;
+}
+
+/* свойства модального окна по умолчанию */
+.modal {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+  overflow-y: auto; /*добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 350px;
+    max-height: 600px;
+    margin: 10px 200px auto auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.modal-body {
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+.violet {
+  color: violet;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__item__header {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  background-color: #fff;
+}
+
+.slider__wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slider__item {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.slider__control {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  /* color: crimson; */
+  text-align: center;
+  opacity: 0.5;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+  color: gray;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.slider__item > div > h1 {
+  text-align: center;
+}
+
+.slider__item__body {
+  padding-left: 40px;
+  padding-right: 50px;
+  font-size: xx-small;
+}
+
+.brand {
+  width: 60px;
+  height: 60px;
+  background: center / contain no-repeat;
+}
+
+.imVisible {
+  display: none;
+}
+
+#home {
+  background-image: url('img/home-solid.svg');
+}
+
+#store {
+  background-image: url('img/store-solid.svg');
+}
+
+#cart {
+  background-image: url('img/cart-plus-solid.svg');
+}
